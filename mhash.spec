@@ -1,6 +1,6 @@
 Summary:	Hash library 
 Name:		mhash
-Version:	0.8.10
+Version:	0.8.12
 Release:	1
 License:	LGPL
 Group:		Libraries
@@ -47,6 +47,7 @@ Static version of libmhash.
 %setup -q
 
 %build
+rm -f missing
 libtoolize --copy --force
 aclocal
 autoconf
