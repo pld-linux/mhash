@@ -2,12 +2,12 @@ Summary:	Hash library
 Summary(pl):	Biblioteka funkcji mieszaj±cych (skrótu)
 Summary(pt_BR):	Interface uniforme para vários algoritmos hash
 Name:		mhash
-Version:	0.8.18
-Release:	2
+Version:	0.9.1
+Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5: c5fcebff6753a03403cfed3ba8771a56
+Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.gz
+# Source0-md5:	8ade81ae33ccbf75e096c1baeecfd153
 Patch0:		%{name}-ac.patch
 URL:		http://mhash.sourceforge.net/
 BuildRequires:	autoconf
@@ -44,7 +44,7 @@ Summary(es):	Archivos de inclusión y bibliotecas de desarrollo
 Summary(pl):	Pliki nag³ówkowe i dokumentacja do libmhash
 Summary(pt_BR):	Arquivos de desenvolvimento para a biblioteca mhash
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and development documentation for libmhash.
@@ -62,7 +62,7 @@ Summary(es):	bibliotecas estaticas mhash
 Summary(pl):	Statyczna wersja biblioteki libmhash
 Summary(pt_BR):	Bibliotecas estáticas do mhash para desenvolvimento
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of libmhash.
@@ -79,10 +79,10 @@ biblioteca mhash.
 %patch0 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure \
 	--enable-static
@@ -92,7 +92,7 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR="$RPM_BUILD_ROOT"
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -102,11 +102,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS ChangeLog NEWS README THANKS TODO doc/skid2-authentication
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc ChangeLog AUTHORS NEWS README TODO
 %attr(755,root,root) %{_libdir}/*.so
 %{_libdir}/*.la
 %{_mandir}/man3/*
