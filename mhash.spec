@@ -1,13 +1,13 @@
 Summary:	Hash library 
 Name:		mhash
-Version:	0.8.3
+Version:	0.8.6
 Release:	1
 License:	LGPL
 Group:		Libraries
 Group(de):	Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-Source0:	ftp://download.sourceforge.net/pub/sourceforge/mhash/%{name}-%{version}.tar.gz
+Source0:	http://mhash.sourceforge.net/dl/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
