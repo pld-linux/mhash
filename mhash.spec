@@ -5,13 +5,6 @@ Version:	0.8.13
 Release:	1
 License:	LGPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	http://mhash.sourceforge.net/dl/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -34,13 +27,6 @@ HMAC daje podstawy autentykacji komunikatСw, zgodnie z RFC 2104.
 Summary:	Header files and development documentation for libmhash
 Summary(pl):	Pliki nagЁСwkowe i dokumentacja do libmhash
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -53,13 +39,6 @@ Pliki nagЁСwkowe i dokumentacja programisty do libmhash.
 Summary:	Static version of libmhash 
 Summary(pl):	Statyczna wersja biblioteki libmhash
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
