@@ -1,9 +1,10 @@
 Summary:	Hash library 
 Name:		mhash
-Version:	0.8.2
+Version:	0.8.3
 Release:	1
 License:	LGPL
 Group:		Libraries
+Group(de):	Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/mhash/%{name}-%{version}.tar.gz
@@ -19,6 +20,7 @@ implements the basics for message authentication, following RFC 2104.
 Summary:	Header files and development documentation for libmhash
 Summary(pl):	Pliki nag³ówkowe i dokumentacja do libmhash
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -28,8 +30,9 @@ Header files and development documentation for libmhash.
 
 %package static
 Summary:	Static version of libmhash 
-Summary(pl):    Statyczna wersja biblioteki libmhash
+Summary(pl):	Statyczna wersja biblioteki libmhash
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
@@ -47,10 +50,10 @@ Static version of libmhash
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR="$RPM_BUILD_ROOT" install
+%{__make} install \
+	DESTDIR="$RPM_BUILD_ROOT"
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/*.so.*.* 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* ChangeLog AUTHORS NEWS README TODO
+gzip -9nf ChangeLog AUTHORS NEWS README TODO
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
