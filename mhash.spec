@@ -1,6 +1,6 @@
 Summary:	Hash library 
 Name:		mhash
-Version:	0.8.6
+Version:	0.8.8
 Release:	1
 License:	LGPL
 Group:		Libraries
