@@ -8,6 +8,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5: c5fcebff6753a03403cfed3ba8771a56
+Patch0:		%{name}-ac.patch
 URL:		http://mhash.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -75,6 +76,7 @@ biblioteca mhash.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f missing
