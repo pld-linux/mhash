@@ -1,6 +1,6 @@
 Summary:	Hash library 
 Name:		mhash
-Version:	0.8.9
+Version:	0.8.10
 Release:	1
 License:	LGPL
 Group:		Libraries
@@ -8,6 +8,9 @@ Group(de):	Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	http://mhash.sourceforge.net/dl/%{name}-%{version}.tar.gz
+BuildRequire:	autoconf
+BuildRequire:	automake
+BuildRequire:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,6 +47,10 @@ Static version of libmhash
 %setup -q
 
 %build
+libtoolize --copy --force
+aclocal
+autoconf
+automake -a -c
 %configure
 %{__make}
 
