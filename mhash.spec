@@ -1,12 +1,12 @@
 Summary:	Hash library 
-Name:		libmhash
+Name:		mhash
 Version:	0.8.2
 Release:	1
 License:	LGPL
 Group:		Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-Source0:	http://mhash.sourceforge.net/dl/mhash-%{version}.tar.gz
+Source0:	http://mhash.sourceforge.net/dl/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +38,7 @@ Requires:	%{name}-devel = %{version}
 Static version of libmhash
 
 %prep
-%setup -q -n mhash-%{version}
+%setup -q
 
 %build
 %configure
@@ -66,8 +66,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz 
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_mandir}/man3
-%{_includedir}
+%{_mandir}/man3/*
+%{_includedir}/*
 
 %files static
 %defattr(644,root,root,755)
