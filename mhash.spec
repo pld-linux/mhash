@@ -7,6 +7,7 @@ Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://telia.dl.sourceforge.net/sourceforge/mhash/%{name}-%{version}.tar.gz
+# Source0-md5: c5fcebff6753a03403cfed3ba8771a56
 URL:		http://mhash.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
