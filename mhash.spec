@@ -1,9 +1,9 @@
 Summary:	Hash library
-Summary(pl):	Biblioteka funkcji mieszaj±cych
+Summary(pl):	Biblioteka funkcji mieszaj±cych (skrótu)
 Summary(pt_BR):	Interface uniforme para vários algoritmos hash
 Name:		mhash
-Version:	0.8.16
-Release:	0.1
+Version:	0.8.17
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://telia.dl.sourceforge.net/sourceforge/mhash/%{name}-%{version}.tar.gz
@@ -21,9 +21,10 @@ implements the basics for message authentication, following RFC 2104.
 
 %description -l pl
 Mhash to biblioteka dostarczaj±ca jednolity interfejs do du¿ej liczby
-algorytmów mieszaj±cych. Te algorytmy mog± byæ u¿ywane do liczenia sum
-kontrolnych, oznaczeñ komunikatów oraz innych sygnatur. Wsparcie dla
-HMAC daje podstawy autentykacji komunikatów, zgodnie z RFC 2104.
+algorytmów mieszaj±cych (skrótu). Te algorytmy mog± byæ u¿ywane do
+liczenia sum kontrolnych, oznaczeñ komunikatów oraz innych sygnatur.
+Obs³uga HMAC daje podstawy dla uwierzytelniania wiadomo¶ci, zgodnie z
+RFC 2104.
 
 %description -l pt_BR
 A biblioteca mhash provê uma interface uniforme para um grande número de
@@ -50,16 +51,8 @@ Header files and development documentation for libmhash.
 Pliki nag³ówkowe i dokumentacja programisty do libmhash.
 
 %description devel -l pt_BR
-A biblioteca mhash provê uma interface uniforme para um grande número de
-algoritmos hash. Estes algoritmos podem ser utilizados para computar checksums,
-digests de mensagens, e outras assinaturas. O suporte a HMAC implementa o básico
-para autenticação de mensagens, seguindo o RFC 2104. Nas versões mais recentes
-foram adicionados alguns algoritmos de geração de chaves, que utilizam
-algoritmos hash. A biblioteca suporta os algoritmos CRC32, MD5, SHA1, HAVAL256,
-TIGER, RIPEMD260, GOST, CRC32B, HAVAL224, HAVAL192, HAVAL160, HAVAL128,
-TIGER128, TIGER160, MD4, SHA256, and ADLER32.
-
-Esse pacote contém arquivos de desenvolvimento para a biblioteca mhash.
+Esse pacote contém arquivos de desenvolvimento para a biblioteca
+mhash.
 
 %package static
 Summary:	Static version of libmhash
@@ -76,17 +69,8 @@ Static version of libmhash.
 Statyczna wersja libmhash.
 
 %description static -l pt_BR
-A biblioteca mhash provê uma interface uniforme para um grande número de
-algoritmos hash. Estes algoritmos podem ser utilizados para computar checksums,
-digests de mensagens, e outras assinaturas. O suporte a HMAC implementa o básico
-para autenticação de mensagens, seguindo o RFC 2104. Nas versões mais recentes
-foram adicionados alguns algoritmos de geração de chaves, que utilizam
-algoritmos hash. A biblioteca suporta os algoritmos CRC32, MD5, SHA1, HAVAL256,
-TIGER, RIPEMD260, GOST, CRC32B, HAVAL224, HAVAL192, HAVAL160, HAVAL128,
-TIGER128, TIGER160, MD4, SHA256, and ADLER32.
-
-Esse pacote contém arquivos de desenvolvimento estáticos para a biblioteca
-mhash.
+Esse pacote contém arquivos de desenvolvimento estáticos para a
+biblioteca mhash.
 
 %prep
 %setup -q
