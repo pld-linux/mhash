@@ -1,8 +1,8 @@
 Summary:	Hash library 
 Summary(pl):	Biblioteka funkcji mieszaj±cych
 Name:		mhash
-Version:	0.8.12
-Release:	2
+Version:	0.8.13
+Release:	1
 License:	LGPL
 Group:		Libraries
 Group(de):	Libraries
