@@ -47,7 +47,7 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make DESTDIR="$RPM_BUILD_ROOT" install
+%{__make} DESTDIR="$RPM_BUILD_ROOT" install
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/*.so.*.* 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* ChangeLog AUTHORS NEWS README TODO
