@@ -1,4 +1,4 @@
-Summary:	Hash library 
+Summary:	Hash library
 Summary(pl):	Biblioteka funkcji mieszaj±cych
 Name:		mhash
 Version:	0.8.13
@@ -36,7 +36,7 @@ Header files and development documentation for libmhash.
 Pliki nag³ówkowe i dokumentacja programisty do libmhash.
 
 %package static
-Summary:	Static version of libmhash 
+Summary:	Static version of libmhash
 Summary(pl):	Statyczna wersja biblioteki libmhash
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
@@ -79,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz 
+%doc *.gz
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_mandir}/man3/*
 %{_includedir}/*
