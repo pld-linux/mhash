@@ -8,9 +8,9 @@ Group(de):	Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	http://mhash.sourceforge.net/dl/%{name}-%{version}.tar.gz
-BuildRequire:	autoconf
-BuildRequire:	automake
-BuildRequire:	libtool
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,7 +41,7 @@ Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
 %description static
-Static version of libmhash
+Static version of libmhash.
 
 %prep
 %setup -q
