@@ -1,0 +1,3 @@
+- change package name to mhash,
+- remove %{_includedir} and %{mandir}/man3 directories from package (this
+  is part of FHS).
