@@ -3,11 +3,12 @@ Summary(pl):	Biblioteka funkcji mieszaj±cych (skrótu)
 Summary(pt_BR):	Interface uniforme para vários algoritmos hash
 Name:		mhash
 Version:	0.9.3
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.gz
 # Source0-md5:	8c2dc7b2bfe84bccf8d25d338bf75760
+Patch0:		%{name}-mhash_free.patch
 URL:		http://mhash.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -28,13 +29,14 @@ Obs³uga HMAC daje podstawy dla uwierzytelniania wiadomo¶ci, zgodnie z
 RFC 2104.
 
 %description -l pt_BR
-A biblioteca mhash provê uma interface uniforme para um grande número de
-algoritmos hash. Estes algoritmos podem ser utilizados para computar checksums,
-digests de mensagens, e outras assinaturas. O suporte a HMAC implementa o básico
-para autenticação de mensagens, seguindo o RFC 2104. Nas versões mais recentes
-foram adicionados alguns algoritmos de geração de chaves, que utilizam
-algoritmos hash. A biblioteca suporta os algoritmos CRC32, MD5, SHA1, HAVAL256,
-TIGER, RIPEMD260, GOST, CRC32B, HAVAL224, HAVAL192, HAVAL160, HAVAL128,
+A biblioteca mhash provê uma interface uniforme para um grande número
+de algoritmos hash. Estes algoritmos podem ser utilizados para
+computar checksums, digests de mensagens, e outras assinaturas. O
+suporte a HMAC implementa o básico para autenticação de mensagens,
+seguindo o RFC 2104. Nas versões mais recentes foram adicionados
+alguns algoritmos de geração de chaves, que utilizam algoritmos hash.
+A biblioteca suporta os algoritmos CRC32, MD5, SHA1, HAVAL256, TIGER,
+RIPEMD260, GOST, CRC32B, HAVAL224, HAVAL192, HAVAL160, HAVAL128,
 TIGER128, TIGER160, MD4, SHA256, and ADLER32.
 
 %package devel
@@ -75,6 +77,7 @@ biblioteca mhash.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %{__libtoolize}
