@@ -1,6 +1,9 @@
 # TODO:
 # http://sourceforge.net/tracker/index.php?func=detail&aid=1390988&group_id=4286&atid=104286
-%bcond_without	tests
+#
+# Conditional build:
+%bcond_without	tests	# don't perform "make check"
+#
 Summary:	Hash library
 Summary(pl):	Biblioteka funkcji mieszaj±cych (skrótu)
 Summary(pt_BR):	Interface uniforme para vários algoritmos hash
