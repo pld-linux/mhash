@@ -1,10 +1,12 @@
+# TODO:
+# http://sourceforge.net/tracker/index.php?func=detail&aid=1390988&group_id=4286&atid=104286
 %bcond_without	tests
 Summary:	Hash library
 Summary(pl):	Biblioteka funkcji mieszaj±cych (skrótu)
 Summary(pt_BR):	Interface uniforme para vários algoritmos hash
 Name:		mhash
 Version:	0.9.3
-Release:	2
+Release:	2.1
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.gz
@@ -90,12 +92,7 @@ biblioteca mhash.
 	--enable-static
 %{__make}
 
-%if %{with tests}
-cd src
-for a in *_test; do
-	[ -x "$a" ] && "./$a" 
-done
-%endif
+%{?with_tests:%{__make} check}
 
 %install
 rm -rf $RPM_BUILD_ROOT
