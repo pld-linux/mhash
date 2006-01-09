@@ -1,3 +1,4 @@
+%bcond_without	tests
 Summary:	Hash library
 Summary(pl):	Biblioteka funkcji mieszaj±cych (skrótu)
 Summary(pt_BR):	Interface uniforme para vários algoritmos hash
@@ -88,6 +89,13 @@ biblioteca mhash.
 %configure \
 	--enable-static
 %{__make}
+
+%if %{with tests}
+cd src
+for a in *_test; do
+	[ -x "$a" ] && "./$a" 
+done
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
