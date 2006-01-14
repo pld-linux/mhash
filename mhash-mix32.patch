@@ -1,0 +1,20 @@
+diff -ur mhash-0.9.4.org/lib/stdfns.c mhash-0.9.4/lib/stdfns.c
+--- mhash-0.9.4.org/lib/stdfns.c	2006-01-10 04:47:18.000000000 +0100
++++ mhash-0.9.4/lib/stdfns.c	2006-01-14 19:50:00.000000000 +0100
+@@ -125,10 +125,12 @@
+ }
+ 
+ #define MIX32(a) \
+-        (((mutils_word32)((mutils_word8 *)(a))[0]) | \
+-        (((mutils_word32)((mutils_word8 *)(a))[1]) << 8)| \
+-        (((mutils_word32)((mutils_word8 *)(a))[2]) << 16)| \
+-        (((mutils_word32)((mutils_word8 *)(a))[3]) << 24))
++	((mutils_word32) \
++		(((a & (mutils_word32) 0x000000ffU) << 24) | \
++		 ((a & (mutils_word32) 0x0000ff00U) << 8) | \
++		 ((a & (mutils_word32) 0x00ff0000U) >> 8) | \
++		 ((a & (mutils_word32) 0xff000000U) >> 24)) \
++	)
+ 
+ /*
+    Byte swap a 32bit integer 
