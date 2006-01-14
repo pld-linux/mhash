@@ -1,0 +1,38 @@
+diff -ur mhash-0.9.4.org/src/hmac_test.c mhash-0.9.4/src/hmac_test.c
+--- mhash-0.9.4.org/src/hmac_test.c	2006-01-09 07:48:08.000000000 +0100
++++ mhash-0.9.4/src/hmac_test.c	2006-01-14 19:20:13.324721000 +0100
+@@ -42,8 +42,6 @@
+ 	mutils_word32 j;
+ 	int result;
+ 
+-	mutils_bzero(tmp, sizeof(tmp));
+-
+ 	passlen=sizeof(KEY1) - 1;
+ 	password = mutils_malloc(passlen + 1);
+ 	mutils_memcpy(password, (mutils_word8 *) KEY1, passlen);
+diff -ur mhash-0.9.4.org/src/keygen_test.c mhash-0.9.4/src/keygen_test.c
+--- mhash-0.9.4.org/src/keygen_test.c	2006-01-09 06:18:15.000000000 +0100
++++ mhash-0.9.4/src/keygen_test.c	2006-01-14 19:13:43.060331000 +0100
+@@ -60,7 +60,7 @@
+ 	salt = (mutils_word8 *) mutils_malloc(salt_size);
+ 	key = (mutils_word8 *) mutils_malloc(keysize);
+ 
+-	if ((salt == NULL) || (key == NULL) || (tmp == NULL))
++	if ((salt == NULL) || (key == NULL))
+ 	{
+ 		fprintf(stderr, "KEYGEN-Test (KEYGEN_MCRYPT): Failed\n");
+ 		fprintf(stderr, "Cannot allocate memory.\n");
+@@ -76,6 +76,13 @@
+ 
+ 	tmp = mutils_asciify(key, keysize);
+ 
++	if (tmp == NULL)
++	{
++		fprintf(stderr, "KEYGEN-Test (KEYGEN_MCRYPT): Failed\n");
++		fprintf(stderr, "Cannot allocate memory (2).\n");
++		return(MUTILS_SYSTEM_RESOURCE_ERROR);
++	}
++
+ 	result = mutils_strcmp((mutils_word8 *) KEY1, tmp);
+ 
+ 	mutils_free(password);
