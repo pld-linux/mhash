@@ -1,5 +1,3 @@
-# TODO:
-# http://sourceforge.net/tracker/index.php?func=detail&aid=1390988&group_id=4286&atid=104286
 #
 # Conditional build:
 %bcond_without	tests	# don't perform "make check"
@@ -9,12 +7,13 @@ Summary(pl):	Biblioteka funkcji mieszaj±cych (skrótu)
 Summary(pt_BR):	Interface uniforme para vários algoritmos hash
 Name:		mhash
 Version:	0.9.4
-Release:	0.1
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.gz
 # Source0-md5:	e403d512cc3dbb90870a6cb4527890fc
 Patch0:		%{name}-mhash_free.patch
+Patch1:		%{name}-tests.patch
 URL:		http://mhash.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -84,6 +83,7 @@ biblioteca mhash.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p1
 
 %build
 %{__libtoolize}
