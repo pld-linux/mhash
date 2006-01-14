@@ -14,6 +14,7 @@ Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.gz
 # Source0-md5:	e403d512cc3dbb90870a6cb4527890fc
 Patch0:		%{name}-mhash_free.patch
 Patch1:		%{name}-tests.patch
+Patch2:		%{name}-mix32.patch
 URL:		http://mhash.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -84,6 +85,7 @@ biblioteca mhash.
 %setup -q
 %patch0 -p0
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__libtoolize}
