@@ -6,15 +6,14 @@ Summary:	Hash library
 Summary(pl):	Biblioteka funkcji mieszaj±cych (skrótu)
 Summary(pt_BR):	Interface uniforme para vários algoritmos hash
 Name:		mhash
-Version:	0.9.4
+Version:	0.9.4a
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.gz
-# Source0-md5:	e403d512cc3dbb90870a6cb4527890fc
-Patch0:		%{name}-mhash_free.patch
-Patch1:		%{name}-tests.patch
-Patch2:		%{name}-mix32.patch
+Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.bz2
+# Source0-md5:	174bb58b1a39d7fe545d482c0aa0d4ae
+Patch0:		%{name}-tests.patch
+Patch1:		%{name}-mix32.patch
 URL:		http://mhash.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -82,10 +81,9 @@ Esse pacote contém arquivos de desenvolvimento estáticos para a
 biblioteca mhash.
 
 %prep
-%setup -q
-%patch0 -p0
+%setup -q -n %{name}-0.9.4
+%patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 %{__libtoolize}
