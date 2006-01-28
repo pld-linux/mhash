@@ -14,6 +14,7 @@ Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.bz2
 # Source0-md5:	174bb58b1a39d7fe545d482c0aa0d4ae
 Patch0:		%{name}-tests.patch
 Patch1:		%{name}-mix32.patch
+Patch2:		%{name}-include.patch
 URL:		http://mhash.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -84,8 +85,7 @@ biblioteca mhash.
 %setup -q -n %{name}-0.9.4
 %patch0 -p1
 %patch1 -p1
-
-sed -i 's#g.h$#g.h mutils/mincludes.h#' include/Makefile.am
+%patch2 -p1
 
 %build
 %{__libtoolize}
