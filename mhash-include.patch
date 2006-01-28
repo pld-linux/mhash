@@ -1,0 +1,11 @@
+diff -Nur mhash-0.9.4.org/include/Makefile.am mhash-0.9.4/include/Makefile.am
+--- mhash-0.9.4.org/include/Makefile.am	2006-01-10 03:26:57.000000000 +0100
++++ mhash-0.9.4/include/Makefile.am	2006-01-29 00:11:37.251602024 +0100
+@@ -1,6 +1,6 @@
+ #AUTOMAKE_OPTIONS = foreign
+ 
+-nobase_include_HEADERS = mhash.h mutils/mhash.h mutils/mglobal.h mutils/mtypes.h mutils/mutils.h mutils/mhash_config.h
++nobase_include_HEADERS = mhash.h mutils/mhash.h mutils/mglobal.h mutils/mtypes.h mutils/mutils.h mutils/mhash_config.h mutils/mincludes.h
+ 
+ dist-hook:
+ 	find $(distdir) -name CVS -o -name .cvsignore | xargs rm -rf
