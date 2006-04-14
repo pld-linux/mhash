@@ -1,0 +1,36 @@
+--- mhash-0.9.6/lib/keygen_s2k.c.orig	2006-01-08 09:14:47.000000000 +0100
++++ mhash-0.9.6/lib/keygen_s2k.c	2006-04-14 19:51:12.200342250 +0200
+@@ -39,12 +39,12 @@
+ 	MHASH td;
+ 	mutils_word32 block_size = mhash_get_block_size(algorithm);
+ 
+-	total = times * block_size;
+-
+ 	times = key_size / block_size;
+-
+ 	if (key_size % block_size != 0) times++;
+ 
++/*	total = times * block_size;	*/
++	total = times * MAX_DIGEST_SIZE;
++
+ 	key = mutils_malloc(total);
+ 
+ #if defined(MHASH_ROBUST)
+@@ -57,7 +57,7 @@
+ 	for (i = 0; i < times; i++) {
+ 		td = mhash_init(algorithm);
+ 		if (td == MHASH_FAILED) {
+-			mutils_free(key);
++			free(key);
+ 			return(-MUTILS_INVALID_FUNCTION);
+ 		}
+ 		
+@@ -70,7 +70,7 @@
+ 	}
+ 	mutils_memcpy(keyword, key, key_size);
+ 	mutils_bzero(key, key_size);
+-	mutils_free(key);
++	free(key);
+ 	return(MUTILS_OK);
+ }
+ 
