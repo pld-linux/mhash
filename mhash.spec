@@ -3,8 +3,8 @@
 %bcond_without	tests	# don't perform "make check"
 #
 Summary:	Hash library
-Summary(pl):	Biblioteka funkcji mieszaj±cych (skrÛtu)
-Summary(pt_BR):	Interface uniforme para v·rios algoritmos hash
+Summary(pl.UTF-8):   Biblioteka funkcji mieszajƒÖcych (skr√≥tu)
+Summary(pt_BR.UTF-8):   Interface uniforme para v√°rios algoritmos hash
 Name:		mhash
 Version:	0.9.7.1
 Release:	1
@@ -24,58 +24,58 @@ number of hash algorithms. These algorithms can be used to compute
 checksums, message digests, and other signatures. The HMAC support
 implements the basics for message authentication, following RFC 2104.
 
-%description -l pl
-Mhash to biblioteka dostarczaj±ca jednolity interfejs do duøej liczby
-algorytmÛw mieszaj±cych (skrÛtu). Te algorytmy mog± byÊ uøywane do
-liczenia sum kontrolnych, oznaczeÒ komunikatÛw oraz innych sygnatur.
-Obs≥uga HMAC daje podstawy dla uwierzytelniania wiadomo∂ci, zgodnie z
+%description -l pl.UTF-8
+Mhash to biblioteka dostarczajƒÖca jednolity interfejs do du≈ºej liczby
+algorytm√≥w mieszajƒÖcych (skr√≥tu). Te algorytmy mogƒÖ byƒá u≈ºywane do
+liczenia sum kontrolnych, oznacze≈Ñ komunikat√≥w oraz innych sygnatur.
+Obs≈Çuga HMAC daje podstawy dla uwierzytelniania wiadomo≈õci, zgodnie z
 RFC 2104.
 
-%description -l pt_BR
-A biblioteca mhash provÍ uma interface uniforme para um grande n˙mero
+%description -l pt_BR.UTF-8
+A biblioteca mhash prov√™ uma interface uniforme para um grande n√∫mero
 de algoritmos hash. Estes algoritmos podem ser utilizados para
 computar checksums, digests de mensagens, e outras assinaturas. O
-suporte a HMAC implementa o b·sico para autenticaÁ„o de mensagens,
-seguindo o RFC 2104. Nas versıes mais recentes foram adicionados
-alguns algoritmos de geraÁ„o de chaves, que utilizam algoritmos hash.
+suporte a HMAC implementa o b√°sico para autentica√ß√£o de mensagens,
+seguindo o RFC 2104. Nas vers√µes mais recentes foram adicionados
+alguns algoritmos de gera√ß√£o de chaves, que utilizam algoritmos hash.
 A biblioteca suporta os algoritmos CRC32, MD5, SHA1, HAVAL256, TIGER,
 RIPEMD260, GOST, CRC32B, HAVAL224, HAVAL192, HAVAL160, HAVAL128,
 TIGER128, TIGER160, MD4, SHA256, and ADLER32.
 
 %package devel
 Summary:	Header files and development documentation for libmhash
-Summary(es):	Archivos de inclusiÛn y bibliotecas de desarrollo
-Summary(pl):	Pliki nag≥Ûwkowe i dokumentacja do libmhash
-Summary(pt_BR):	Arquivos de desenvolvimento para a biblioteca mhash
+Summary(es.UTF-8):   Archivos de inclusi√≥n y bibliotecas de desarrollo
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe i dokumentacja do libmhash
+Summary(pt_BR.UTF-8):   Arquivos de desenvolvimento para a biblioteca mhash
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and development documentation for libmhash.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe i dokumentacja programisty do libmhash.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe i dokumentacja programisty do libmhash.
 
-%description devel -l pt_BR
-Esse pacote contÈm arquivos de desenvolvimento para a biblioteca
+%description devel -l pt_BR.UTF-8
+Esse pacote cont√©m arquivos de desenvolvimento para a biblioteca
 mhash.
 
 %package static
 Summary:	Static version of libmhash
-Summary(es):	bibliotecas estaticas mhash
-Summary(pl):	Statyczna wersja biblioteki libmhash
-Summary(pt_BR):	Bibliotecas est·ticas do mhash para desenvolvimento
+Summary(es.UTF-8):   bibliotecas estaticas mhash
+Summary(pl.UTF-8):   Statyczna wersja biblioteki libmhash
+Summary(pt_BR.UTF-8):   Bibliotecas est√°ticas do mhash para desenvolvimento
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of libmhash.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja libmhash.
 
-%description static -l pt_BR
-Esse pacote contÈm arquivos de desenvolvimento est·ticos para a
+%description static -l pt_BR.UTF-8
+Esse pacote cont√©m arquivos de desenvolvimento est√°ticos para a
 biblioteca mhash.
 
 %prep
