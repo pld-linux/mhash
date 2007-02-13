@@ -3,8 +3,8 @@
 %bcond_without	tests	# don't perform "make check"
 #
 Summary:	Hash library
-Summary(pl.UTF-8):   Biblioteka funkcji mieszających (skrótu)
-Summary(pt_BR.UTF-8):   Interface uniforme para vários algoritmos hash
+Summary(pl.UTF-8):	Biblioteka funkcji mieszających (skrótu)
+Summary(pt_BR.UTF-8):	Interface uniforme para vários algoritmos hash
 Name:		mhash
 Version:	0.9.7.1
 Release:	1
@@ -44,9 +44,9 @@ TIGER128, TIGER160, MD4, SHA256, and ADLER32.
 
 %package devel
 Summary:	Header files and development documentation for libmhash
-Summary(es.UTF-8):   Archivos de inclusión y bibliotecas de desarrollo
-Summary(pl.UTF-8):   Pliki nagłówkowe i dokumentacja do libmhash
-Summary(pt_BR.UTF-8):   Arquivos de desenvolvimento para a biblioteca mhash
+Summary(es.UTF-8):	Archivos de inclusión y bibliotecas de desarrollo
+Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja do libmhash
+Summary(pt_BR.UTF-8):	Arquivos de desenvolvimento para a biblioteca mhash
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -62,9 +62,9 @@ mhash.
 
 %package static
 Summary:	Static version of libmhash
-Summary(es.UTF-8):   bibliotecas estaticas mhash
-Summary(pl.UTF-8):   Statyczna wersja biblioteki libmhash
-Summary(pt_BR.UTF-8):   Bibliotecas estáticas do mhash para desenvolvimento
+Summary(es.UTF-8):	bibliotecas estaticas mhash
+Summary(pl.UTF-8):	Statyczna wersja biblioteki libmhash
+Summary(pt_BR.UTF-8):	Bibliotecas estáticas do mhash para desenvolvimento
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
