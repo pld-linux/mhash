@@ -1,0 +1,11 @@
+--- lib/Makefile.am
++++ lib/Makefile.am
+@@ -27,6 +27,8 @@
+ 
+ libmhash_la_LDFLAGS = -version-info 2
+ 
++libmhash_la_CFLAGS = -fPIC
++
+ EXTRA_DIST = libmhash.sym
+ 
+ dist-hook:
