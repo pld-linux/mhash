@@ -12,6 +12,8 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.bz2
 # Source0-md5:	d113a853e0ac21c49c5a1acea0daaade
+Patch0:		%{name}-shared.patch
+Patch1:		%{name}-memalign.patch
 URL:		http://mhash.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -80,6 +82,8 @@ biblioteca mhash.
 
 %prep
 %setup -q
+%patch0 -p0
+%patch1 -p1
 
 %build
 %{__libtoolize}
