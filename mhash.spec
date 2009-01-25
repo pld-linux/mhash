@@ -8,13 +8,13 @@ Summary(pt_BR.UTF-8):	Interface uniforme para vários algoritmos hash
 Name:		mhash
 Version:	0.9.9.9
 Release:	1
-License:	LGPL
+License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.bz2
 # Source0-md5:	f91c74f9ccab2b574a98be5bc31eb280
 Patch0:		%{name}-shared.patch
 URL:		http://mhash.sourceforge.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -113,15 +113,17 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO doc/skid2-authentication
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libmhash.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libmhash.so.2
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so
-%{_libdir}/*.la
-%{_mandir}/man3/*
-%{_includedir}/*
+%attr(755,root,root) %{_libdir}/libmhash.so
+%{_libdir}/libmhash.la
+%{_includedir}/mhash.h
+%{_includedir}/mutils
+%{_mandir}/man3/mhash.3*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libmhash.a
