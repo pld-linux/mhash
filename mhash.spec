@@ -7,12 +7,13 @@ Summary(pl.UTF-8):	Biblioteka funkcji mieszających (skrótu)
 Summary(pt_BR.UTF-8):	Interface uniforme para vários algoritmos hash
 Name:		mhash
 Version:	0.9.9.9
-Release:	4
+Release:	5
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/mhash/%{name}-%{version}.tar.bz2
 # Source0-md5:	f91c74f9ccab2b574a98be5bc31eb280
 Patch0:		%{name}-shared.patch
+Patch1:		use-after-free.patch
 URL:		http://mhash.sourceforge.net/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
@@ -82,6 +83,7 @@ biblioteca mhash.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p1
 
 %build
 %{__libtoolize}

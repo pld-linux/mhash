@@ -1,0 +1,11 @@
+--- mhash-0.9.9.9/src/keygen_test.c.orig	2015-03-10 23:30:04.054905341 +0100
++++ mhash-0.9.9.9/src/keygen_test.c	2015-03-10 23:30:19.141571475 +0100
+@@ -121,8 +121,6 @@
+ 	
+ 	mhash_keygen_ext(KEYGEN_S2K_SALTED, data, key, keysize, password, passlen);
+ 
+-	mutils_memset(tmp, 0, keysize * 2);
+-
+ 	tmp = mutils_asciify(key, keysize);
+ 
+ 	result = mutils_strcmp((mutils_word8 *) KEY2, tmp);
