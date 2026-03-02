@@ -82,7 +82,7 @@ biblioteca mhash.
 
 %prep
 %setup -q
-%patch -P0 -p0
+%patch -P0 -p1
 %patch -P1 -p1
 
 %build
