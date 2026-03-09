@@ -1,0 +1,10 @@
+--- mhash-0.9.9.9/src/hmac_test.c.orig	2026-03-09 19:34:26.363023011 +0100
++++ mhash-0.9.9.9/src/hmac_test.c	2026-03-09 19:34:26.367436508 +0100
+@@ -76,7 +76,6 @@
+ 
+ 	/* Test No 2 */	
+ 	
+-	mutils_memset(tmp, 0, sizeof(tmp));
+ 	
+ 	passlen=sizeof(KEY2) - 1;
+ 	password = (mutils_word8 *) mutils_malloc(passlen+1);
